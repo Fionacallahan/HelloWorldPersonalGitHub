@@ -74,6 +74,9 @@ print(copy_of_candies)
 candies.remove("twix")
 #LOTS of list methods 
 
+#will go through more of lists in next few classes 
+
+
 
 
 
