@@ -76,7 +76,14 @@ candies.remove("twix")
 
 #will go through more of lists in next few classes 
 
+#continuing in class 
+food = ["chips", "fish"]
+food.append("pizza")
+print(food)
 
+#extend (for appending items in another list)
+food.extend(["cheese", "crackers"]) #adds all the items in a list as items 
+print(food)
 
 
 

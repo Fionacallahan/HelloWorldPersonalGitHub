@@ -4,6 +4,7 @@ print("hello")
 
 import math #use code from another python module, put import statements at the top always 
 from datetime import datetime #importing a module from a package 
+import random 
 """ 
 this is a multi 
 line
@@ -124,11 +125,53 @@ def my_print(msg_str): #header
      """docstring 
      prepends a timestamp to the msg_str before printing 
      """
-    print(f"{datetime.now()}: {msg_str}")
+    #print(f"{datetime.now()}: {msg_str}")
 
 my_print("testing123")
 #TASK: define/call a function that accepts a radius 
 #and returns the area and the circumference of a circle with that radius 
+def compute_circle_stats(radius):
+    area = math.pi * radius ** 2
+    circumference = 2 * math.pi * radius 
+    print("area:", area, "circumference:", circumference)
+
+compute_circle_stats(5)
+
+
+#with return 
+def compute_circle_stats2(radius):
+    area = math.pi * radius ** 2
+    circumference = 2 * math.pi * radius 
+    return (area, circumference) #send back values to the calling code! 
+    #THIS IS A TUPLE^
+
+#tuples are immutable (cannot be changed)
+#lists are mutable (can be changed )
+
+#unpacks return values 
+area_result, circum_result = compute_circle_stats2(5)
+print("area result:", area_result, "circumference result:", circum_result)
+#does not unpack return values 
+result = compute_circle_stats2(5)
+print("type(result):", type(result))
+print("result:", result, result[0], result[1])
+
+#RANDOM NUMBERS 
+#often we need random numbers for simulating random events 
+#or initializing the state of an algorithm 
+#need to import random 
+
+#if you want the same random numbers each time you run your program, "seed" the random number generator 
+random.seed(0)
+#seed to get the same results every time? 
+
+#let us roll a 6 sided die 
+#import the random module 
+roll = random.randrange(1,7) #[1,7)
+print("roll:", roll)
+roll = random.randint(1,6) # [1,6]
+print("roll:", roll )
+
 
 
 
