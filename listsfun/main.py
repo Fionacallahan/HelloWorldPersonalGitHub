@@ -72,6 +72,7 @@ print(copy_of_candies)
 
 #list methods 
 candies.remove("twix")
+print(candies)
 #LOTS of list methods 
 
 #will go through more of lists in next few classes 
@@ -82,8 +83,36 @@ food.append("pizza")
 print(food)
 
 #extend (for appending items in another list)
-food.extend(["cheese", "crackers"]) #adds all the items in a list as items 
+food.extend(["cheese", "crackers"]) #adds all the items in a list as singular items 
 print(food)
+
+# += list concatenate and assign 
+food+= candies
+print(food)
+
+#pop(index) for position based removal 
+item = food.pop(1)
+print(item, food)
+
+
+#lists and strings 
+#creating a string from a list of strings 
+#using the string join method 
+list_of_strings = ["co", "m", "pute", "r"]
+word = "".join(list_of_strings) #can join strings with anything 
+print(word)
+
+#how to make a list from a string 
+list_of_strings2 = list(word)
+print(list_of_strings2)
+
+#split is a string method 
+#from CSV files: used in excel 
+comma_separated_word = "co,m,pute,r" 
+list_strings3 = comma_separated_word.split(",")
+print(list_of_strings)
+#able to deconstruct original string 
+
 
 
 
