@@ -122,10 +122,11 @@ print ("outside the loop")
 #def function_name(parameter list):
 #   body(only executes once you call the function)
 def my_print(msg_str): #header 
-     """docstring 
-     prepends a timestamp to the msg_str before printing 
-     """
-    #print(f"{datetime.now()}: {msg_str}")
+    print(f"{datetime.now()}: {msg_str}")
+    """docstring 
+    prepends a timestamp to the msg_str before printing 
+    """
+
 
 my_print("testing123")
 #TASK: define/call a function that accepts a radius 

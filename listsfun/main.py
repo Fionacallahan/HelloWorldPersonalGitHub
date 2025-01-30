@@ -113,6 +113,13 @@ list_strings3 = comma_separated_word.split(",")
 print(list_of_strings)
 #able to deconstruct original string 
 
+def add_one_to_each_element(nums_list):
+    for i in range(len(nums_list)):
+        nums_list[i] = nums_list[i] + 1
+    print(nums_list)
+test_list = [0,5,10,15,20,25]
+add_one_to_each_element(test_list)
+
 
 
 
