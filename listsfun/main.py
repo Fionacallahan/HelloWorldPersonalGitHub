@@ -121,5 +121,43 @@ test_list = [0,5,10,15,20,25]
 add_one_to_each_element(test_list)
 
 
+#LIST ALIASING 
+list1 = [1,2,3,4]
+list2 = [1,2,3,4]
+#list 2 is a different list object than list 1 (though they have the saem values)
+list1[0] = 10
+print[list1, list2] 
 
+list3 = list1
+list1[0] = 100
+#changes list1 AND list3 
+#list3 is an "alias" for the same object that list1 refers to (they are the same object in memory )
+print(list1, list2, list3)
+
+add_one_to_each_element(list1) #nums_list will be an alias for list1's object
+#makes a change to list1 AND list3 
+print("after call:", list1, list2, list3)
+
+#to make a copy of a 1D list: use the list copy() method 
+list4 = list1.copy() #SHALLOW copy: only goes one layer deep (does not work with 2D)
+list[0] = 10000
+print(list1, list2, list3, list4)
+#python is pass by object reference 
+#   functions with a reference to an object passed in can modify the object 
+#   big picture 
+
+#a few more words about strings 
+#strings are immutable 
+#they support 0-based indexing and slicing 
+# they have methods, like split() and join()
+# strip()
+word = "   \t   \n\n  basketball\n    \n"
+print(word)
+print(repr(word))
+word = word.strip()
+print(repr(word))
+#find()
+print(word.find("et")) #returns index of where the string starts 
+print(word.find("t"))
+print(word.find("z")) #returns -1
 
